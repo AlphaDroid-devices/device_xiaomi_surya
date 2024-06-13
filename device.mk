@@ -30,6 +30,7 @@ PRODUCT_PACKAGES += \
     android.hardware.audio@6.0-impl \
     android.hardware.audio.effect@6.0-impl \
     android.hardware.audio.service \
+    libaudioroute.vendor \
     android.hardware.bluetooth.audio-impl
 
 PRODUCT_PACKAGES += \
@@ -293,6 +294,7 @@ PRODUCT_PACKAGES += \
     libstagefrighthw \
     libstagefright_omx \
     libstagefright_foundation \
+    libstagefright_softomx_plugin.vendor \
     libstagefright_softomx.vendor
 
 PRODUCT_COPY_FILES += \
@@ -317,6 +319,7 @@ PRODUCT_COPY_FILES += \
 
 # Network
 PRODUCT_PACKAGES += \
+    libnetutils.vendor \
     android.system.net.netd@1.1.vendor
 
 PRODUCT_COPY_FILES += \
@@ -410,6 +413,7 @@ PRODUCT_PACKAGES += \
     libjson \
     libril \
     librilutils \
+    libsqlite.vendor \
     librmnetctl
 
 # Recovery
