@@ -26,6 +26,9 @@ $(call inherit-product, device/xiaomi/surya/parts/parts.mk)
 # Inherit surya firmware images
 $(call inherit-product, firmware/xiaomi/surya/Android.mk)
 
+# Build GCam Go
+$(call inherit-product-if-exists, vendor/gcgop/config.mk)
+
 # ANT+
 PRODUCT_PACKAGES += \
     AntHalService-Soong \
