@@ -13,9 +13,34 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, device/xiaomi/surya/device.mk)
 
 # Inherit some common Lineage stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+$(call inherit-product, vendor/alpha/config/common_full_phone.mk)
 
-PRODUCT_NAME := lineage_surya
+# Maintainer
+ALPHA_BUILD_TYPE :=Official
+ALPHA_MAINTAINER := shoya0x00
+
+# Device config
+TARGET_ENABLE_BLUR := true
+TARGET_EXCLUDES_AUDIOFX := true
+TARGET_FACE_UNLOCK_SUPPORTED := true
+TARGET_INCLUDE_RIMUSIC := true
+
+# Build package
+TARGET_BUILD_PACKAGE ?= 3
+ifeq ($(TARGET_BUILD_PACKAGE),3)
+TARGET_INCLUDE_PIXEL_LAUNCHER := true
+TARGET_SUPPORTS_QUICK_TAP := true
+TARGET_SUPPORTS_CALL_RECORDING := true
+TARGET_INCLUDE_STOCK_ARCORE := true
+TARGET_INCLUDE_LIVE_WALLPAPERS := true
+TARGET_SUPPORTS_GOOGLE_RECORDER := true
+WITH_GMS := true
+endif
+
+# Debugging
+TARGET_INCLUDE_MATLOG := false
+
+PRODUCT_NAME := alpha_surya
 PRODUCT_DEVICE := surya
 PRODUCT_BRAND := POCO
 PRODUCT_MODEL := M2007J20CG
