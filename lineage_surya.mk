@@ -16,7 +16,7 @@ $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
 
 # Maintainer
-ALPHA_BUILD_TYPE := Unofficial
+ALPHA_BUILD_TYPE := Official
 ALPHA_MAINTAINER := lily985
 
 # Device config

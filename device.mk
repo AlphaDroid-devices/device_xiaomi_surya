@@ -29,6 +29,9 @@ $(call inherit-product, firmware/xiaomi/surya/Android.mk)
 # Build GCam Go
 $(call inherit-product-if-exists, vendor/gcgop/config.mk)
 
+# Inherit Sign Keys
+$(call inherit-product-if-exists, vendor/lineage-priv/keys/keys.mk)
+
 # ANT+
 PRODUCT_PACKAGES += \
     AntHalService-Soong \
