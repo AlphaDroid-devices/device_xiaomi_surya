@@ -58,6 +58,7 @@ TARGET_USES_DOLBY := true
 
 ifeq ($(TARGET_USES_DOLBY),true)
 PRODUCT_PACKAGES += \
+    DSPVolumeSynchronizer \
     XiaomiDolby
 endif
 
